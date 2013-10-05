@@ -1,0 +1,76 @@
+$open-sans: 'Open Sans', 'sans-serif';
+$volkorn: 'Volkorn', 'serif';
+
+$blue: #1a3a96;
+$darkGrey: #2f2f2f;
+
+$font-body-color: white;
+
+*,
+*:after,
+*:before {
+	margin: 0;
+	padding: 0;
+
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-size: 100%;
+	line-height: 1.5;
+	color: $font-body-color;
+
+	height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	font-size: 1rem;
+	font-weight: normal;
+	font-family: $open-sans;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+	margin-top: 1rem;
+
+}
+
+p {
+	margin-top: 1rem;
+	line-height: 1.5;
+	font-size: 1.125rem;
+
+	&.v {
+		line-height: 1.4;
+		font-size: 1.25rem;
+	}
+}
+
+
+hr {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+
+	border: none;
+	border-top: 1px dotted rgba(black,0.2);
+}
+
+abbr {
+	display: inline-block;
+	
+	font-size: 0.75em;
+	color: white;
+	
+	border-bottom: 1px dotted white;
+	letter-spacing: 0.05em;
+
+	vertical-align: baseline;
+
+}
