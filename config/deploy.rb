@@ -1,3 +1,4 @@
+require "rvm/capistrano"
 require "bundler/capistrano"
 
 
@@ -9,7 +10,7 @@ set :scm, :none
 set :repository, "."
 set :deploy_via, :copy
 set :branch, "master"
-set :use_sudo, true
+set :use_sudo, false
 
 
 server "tbhbbc.cloudapp.net", :web, :app, :db, primary: true
@@ -48,10 +49,6 @@ namespace :deploy do
     # Add database config here
   end
 
-  before 'deploy:update_code' do
-    run_locally 'rm -rf build/*'
-    run_locally 'middleman build'
-  end
 
   after "deploy:finalize_update", "deploy:fix_permissions"
   after "deploy:finalize_update", "deploy:symlink_config"
