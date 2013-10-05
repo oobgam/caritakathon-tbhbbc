@@ -46,6 +46,12 @@ namespace :deploy do
   task :symlink_config, roles: :app do
     # Add database config here
   end
+
+  before 'deploy:update_code' do
+    run_locally 'rm -rf build/*'
+    run_locally 'middleman build'
+  end
+
   after "deploy:finalize_update", "deploy:fix_permissions"
   after "deploy:finalize_update", "deploy:symlink_config"
 end
