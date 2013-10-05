@@ -4,6 +4,8 @@ $volkorn: 'Volkorn', 'serif';
 $blue: #1a3a96;
 $green: #395215;
 $yellow: #eb7220;
+$red: #e83b2e;
+$logoBlue: #2989BC;
 $darkGrey: #2f2f2f;
 
 $font-body-color: white;
@@ -32,12 +34,27 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+label,
+textarea,
+a,
+li {
 	font-size: 1rem;
 	font-weight: normal;
 	font-family: $open-sans;
+	text-decoration: none;
 }
 
+ul,
+ol {
+	margin-top: 1rem;
+	list-style-position: outside;
+}
+
+li {
+	font-size: 1.125rem;
+	margin-top: 0.5rem;
+}
 
 h1,h2,h3,h4,h5,h6 {
 	margin-top: 1rem;
@@ -68,11 +85,38 @@ abbr {
 	display: inline-block;
 	
 	font-size: 0.75em;
+	font-weight: 300;
+
 	color: white;
 	
 	border-bottom: 1px dotted white;
-	letter-spacing: 0.05em;
+	letter-spacing: 0.1em;
 
 	vertical-align: baseline;
 
+}
+
+strong,
+b {
+	font-weight: 700;
+}
+
+q,
+em {
+	font-style: italic;
+}
+
+q {
+	quotes: "“" "”" "‘" "’";
+
+	&:before { content: open-quote; }
+	&:after { content: close-quote; }
+
+}
+
+blockquote {
+	font-size: 1.5rem;
+	font-family: $open-sans;
+	font-weight: 300;
+	padding: 3rem;
 }
