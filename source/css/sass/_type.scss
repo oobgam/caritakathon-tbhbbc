@@ -91,7 +91,6 @@ article .subheader {
 		&:active {
 
 			border-color: black;
-			color: black;
 		}
 	}
 }
@@ -375,6 +374,17 @@ $color: rgba(150,220,220,1);
 	}
 }
 
+.nav404 li a {
+	color: white;
+
+	&:hover,
+	&:active,
+	&.active {
+		color: white;
+		border-color: white;
+	}
+}
+
 #intro .subheader { border-color: $red; }
 #history .subheader { border-color: $yellow; }
 
@@ -385,4 +395,8 @@ p a {
 	&:hover {
 		border-color: $logoBlue;
 	}
+}
+
+#p404 {
+	background-color: $red;
 }
