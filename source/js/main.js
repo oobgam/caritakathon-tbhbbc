@@ -6,9 +6,12 @@ $('a').click(function(){
 });
 
 var $btn = $("#menu"),
-    $change = $btn.children('div');
+    $change = $btn.children('div'),
+    $menu = $("#mob-nav");
 
 $btn.on('click', function(e) {
   e.preventDefault();
   $change.toggleClass('change');
+  console.log($menu);
+  $menu.toggleClass('show');
 });

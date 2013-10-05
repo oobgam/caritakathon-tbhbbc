@@ -67,10 +67,6 @@ article .subheader {
 		background-image: url(/img/feeding.jpg);
 		background-color: $red;
 	}
-
-	&.contact {
-		background-color: $logoBlue;
-	}
 }
 
 .v { font-family: $volkorn; }
@@ -257,8 +253,9 @@ $color: rgba(150,220,220,1);
   box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.2);
 
   position: absolute;
-  top: 1em;
   right: 1em;
+
+  margin-top: 1rem;
 
   z-index: 100;
 
@@ -325,7 +322,7 @@ $color: rgba(150,220,220,1);
   &:before { transform: rotate(135deg); }
 }
 
-.nav, nav {
+.nav {
 	z-index: 90;
 	position: absolute;
 
@@ -359,6 +356,40 @@ $color: rgba(150,220,220,1);
 	}
 }
 
+
+.mob-nav {
+	position: relative;
+	transition: height ease-in-out 0.2s;
+	transform: translate3d(0,0,0);
+	overflow: auto;
+	height: 0;
+	box-shadow: 0 2px 1px 1px rgba(black,0.2);
+
+	.container {
+		margin-top: 0;
+	}
+	li {
+		width: 100%;
+		text-align: center;
+		margin: 0;
+	}
+	a {
+		width: 100%;
+		margin: 0;
+		padding: 0.5rem;
+		text-align: center;
+		display: inline-block;
+		color: $logoBlue;
+
+		&:hover {
+			background-color: $logoBlue;
+			color: white;
+		}
+	}
+
+	&.show { height: 7.5rem; }
+}
+
 .contact,
 .index
 	{ 
@@ -374,6 +405,12 @@ $color: rgba(150,220,220,1);
 	}
 }
 
+.contact,
+.about {
+	.main-header {
+		text-shadow: 0 0 0;
+	}
+}
 .nav404 li a {
 	color: white;
 
@@ -382,6 +419,15 @@ $color: rgba(150,220,220,1);
 	&.active {
 		color: white;
 		border-color: white;
+	}
+}
+
+.contact {
+	background-color: $logoBlue;
+	color: white;
+
+	article.container {
+		color: white;
 	}
 }
 
