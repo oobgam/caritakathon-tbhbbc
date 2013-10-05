@@ -11,7 +11,7 @@ set :branch, "master"
 set :use_sudo, true
 
 
-server "tbhbbc", :web, :app, :db, primary: true
+server "tbhbbc.cloudapp.net", :web, :app, :db, primary: true
 
 
 set :deploy_to, "/home/#{user}/apps/#{application}"
