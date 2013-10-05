@@ -1,3 +1,5 @@
 source "https://rubygems.org"
 
-gem "middleman", "~> 3.0"
+gem "middleman"
+gem "middleman-autoprefixer"
+gem "middleman-livereload"
