@@ -5,7 +5,7 @@ set :application, "tbhbbc"
 set :user, "azureuser"
 
 
-set :scm, :git
+# set :scm, :git
 # set :repository, "git@github.com:YourGitHubAccount/blog_app.git"
 set :branch, "master"
 set :use_sudo, true
