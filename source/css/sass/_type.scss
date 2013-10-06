@@ -488,6 +488,11 @@ p a {
 	background-repeat: no-repeat;
 	background-position: top center;
 
+	abbr {
+		color: $darkGrey;
+		border-color: $darkGrey;
+	}
+
 }
 
 #intro,
