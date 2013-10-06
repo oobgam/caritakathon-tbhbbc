@@ -524,7 +524,16 @@ p a {
 
 	text-indent: -9999px;
 	color: transparent;
+}
 
+nav li a.logo {
+	border-top: none;
+
+	&:hover,
+	&:active {
+		border-top: none;
+		border-color: transparent;
+	}
 }
 
 footer {
