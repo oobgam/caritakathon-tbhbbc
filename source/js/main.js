@@ -17,7 +17,7 @@ $btn.on('click', function(e) {
 });
 
 function showRecaptcha(element) {
-     Recaptcha.create("MyPublicKey", element, {
+     Recaptcha.create("6LddaegSAAAAALwgXrj5ZyisluccNbLcd-52nUNc", element, {
        theme: "red",
        callback: Recaptcha.focus_response_field});
    }

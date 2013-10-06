@@ -1,7 +1,5 @@
 class Contact < Sinatra::Base
 
-  set :public, Proc.new { File.join(root, "_site") }
-
   post '/send' do
     if recaptcha_valid?
       session[:captcha] = true

@@ -127,6 +127,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  json
   middleman
   middleman-autoprefixer
   middleman-livereload
