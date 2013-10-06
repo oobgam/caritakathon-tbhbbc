@@ -1,4 +1,5 @@
 class Contact < Sinatra::Base
+  include Rack::Recaptcha::Helpers
 
   post '/send' do
     if recaptcha_valid?

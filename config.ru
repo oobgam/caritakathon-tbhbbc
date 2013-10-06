@@ -15,6 +15,7 @@ helpers Rack::Recaptcha::Helpers
 enable :sessions
 
 require './contact.rb'
+use Contact
 
 module Rack
 
@@ -38,7 +39,6 @@ module Rack
   end
 end
 
-use Contact
 use Rack::Deflater
 use Rack::TryStatic, :root => "build", :urls => %w[/], :try => ['.html', 'index.html', '/index.html']
 
