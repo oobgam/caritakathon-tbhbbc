@@ -17,29 +17,32 @@ title: Contact
 			Please look for Pastor Cesar C. Lubrico<br>
 			or call us: 3856631
 		</p>
-		<form class="contact-form">
+		<form class="contact-form" id="form" method="post">
 
 			<div class="half">
 				<label for="name">Name / Company</label>
-				<input id="name" type="text" required>
+				<input id="name" type="text" name="name">
 			</div>
 
 			<div class="half">
 				<label for="email">Email</label>
-				<input id="email" type="email" required>
+				<input id="email" type="email" name="email">
 			</div>
 
 			<div class="half">
 				<label for="number">Contact No.</label>
-				<input id="number" type="tel">
+				<input id="number" type="tel" name="tel">
 			</div>
 
 			<hr>
 
 			<label for="inquiry">Inquiry</label>
-			<textarea id="inquiry" rows="3"></textarea>
+			<textarea id="inquiry" rows="3" name="inquiry"></textarea>
+		
+			<div id="recaptcha_div"></div>
+			<div id="notice"></div>
 
-			<input type="submit" class="button">
+			<input type="submit" class="button" value="Inquire">
 		</form>
 	</article>
 </div>

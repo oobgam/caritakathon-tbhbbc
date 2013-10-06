@@ -41,3 +41,13 @@ run lambda{ |env|
     [ 404, { 'Content-Type'  => 'text/html' }, ['404 - page not found'] ]
   end
 }
+
+require 'rubygems'
+require 'sinatra'
+require 'rack/recaptcha'
+
+use Rack::Recaptcha, :public_key => '6LddaegSAAAAALwgXrj5ZyisluccNbLcd-52nUNc', :private_key => '6LddaegSAAAAAJAY5BPEZlvhLV0oGAKJVaCtCBx7'
+helpers Rack::Recaptcha::Helpers
+enable :sessions
+
+require './contact.rb'
