@@ -31,7 +31,7 @@ class Contact < Sinatra::Base
     :from => params[:name] + "<" + params[:email] + ">",
     :to => 'rdmagboo@gmail.com',
     :subject => "Message from" + params[:name],
-    :body => params[:tel] + "<br>" + params[:inquiry],
+    :body => "telephone number: " + params[:tel]  + "message: " + params[:inquiry],
     :port => '587',
     :via => :smtp,
     :via_options => {
