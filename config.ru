@@ -28,10 +28,11 @@ module Rack
   end
 end
 
-require './contact.rb'
+require 'rack'
+require './contact'
 use Contact
 
-use Rack::Deflater
+# use Rack::Deflater
 use Rack::TryStatic, :root => "build", :urls => %w[/], :try => ['.html', 'index.html', '/index.html']
 
 # Run your own Rack app here or use this one to serve 404 messages:

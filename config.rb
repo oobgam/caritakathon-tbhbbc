@@ -8,3 +8,6 @@ activate :livereload
 configure :build do
   activate :minify_css
 end
+
+require './contact'
+use Contact
