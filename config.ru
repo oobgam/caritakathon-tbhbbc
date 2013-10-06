@@ -8,6 +8,11 @@
 
 require 'rubygems'
 require 'sinatra'
+
+use Rack::Recaptcha, :public_key => '6LddaegSAAAAALwgXrj5ZyisluccNbLcd-52nUNc', :private_key => '6LddaegSAAAAAJAY5BPEZlvhLV0oGAKJVaCtCBx7'
+helpers Rack::Recaptcha::Helpers
+enable :sessions
+
 require 'rack/recaptcha'
 require './contact.rb'
 
@@ -46,9 +51,4 @@ run lambda{ |env|
     [ 404, { 'Content-Type'  => 'text/html' }, ['404 - page not found'] ]
   end
 }
-
-
-use Rack::Recaptcha, :public_key => '6LddaegSAAAAALwgXrj5ZyisluccNbLcd-52nUNc', :private_key => '6LddaegSAAAAAJAY5BPEZlvhLV0oGAKJVaCtCBx7'
-helpers Rack::Recaptcha::Helpers
-enable :sessions
 
