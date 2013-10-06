@@ -51,6 +51,13 @@ ol {
 	list-style-position: outside;
 }
 
+article {
+	ul,ol {
+		padding-left: 2rem;
+		@media screen and (min-width: 50rem) {	padding-left: 0; }
+	}
+}
+
 li {
 	font-size: 1.125rem;
 	margin-top: 0.5rem;

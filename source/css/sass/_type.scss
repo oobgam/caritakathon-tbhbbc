@@ -16,7 +16,7 @@ article.container {
 	color: $darkGrey;
 	padding: 1rem 1rem 5rem 1rem;
 	max-width: 50rem;
-	margin-top: 5rem;
+	margin-top: 2rem;
 
 	@media screen and (min-width: 50rem) {
 		margin-top: 10rem;
@@ -247,7 +247,7 @@ $color: rgba(150,220,220,1);
   // to prevent from collapsing
   padding: 1.75em;
 
-  background-color: rgba(255,100,100,0.4);
+  background-color: rgba(200,200,200,0.4);
   border-radius: 0.25em;
 
   box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.2);
@@ -343,8 +343,10 @@ $color: rgba(150,220,220,1);
 			padding-top: 0.5rem;
 			color: #afafaf;
 
-			border-top: 5px solid transparent;
+			border-top: 3px solid transparent;
 
+			transition: color ease-in-out 0.3s,
+						border-color ease-in-out 0.3s;
 			&:hover,
 			&:active,
 			&.active
@@ -361,12 +363,20 @@ $color: rgba(150,220,220,1);
 	position: relative;
 	transition: height ease-in-out 0.2s;
 	transform: translate3d(0,0,0);
-	overflow: auto;
+	overflow: hidden;
 	height: 0;
 	box-shadow: 0 2px 1px 1px rgba(black,0.2);
 
+	background-color: white;
+	color: $logoBlue;
+	width: 100%;
+
+	@media all and (min-width: 50rem) { display: none; }
+
 	.container {
 		margin-top: 0;
+		list-style: none;
+		max-width: 100%;
 	}
 	li {
 		width: 100%;
@@ -381,6 +391,8 @@ $color: rgba(150,220,220,1);
 		display: inline-block;
 		color: $logoBlue;
 
+		transition: background-color ease-in-out 0.3s;
+
 		&:hover {
 			background-color: $logoBlue;
 			color: white;
@@ -394,7 +406,7 @@ $color: rgba(150,220,220,1);
 .index
 	{ 
 	.nav a {
-		color: white;
+		color: #aaa;
 
 		&:hover,
 		&:active,
@@ -411,12 +423,12 @@ $color: rgba(150,220,220,1);
 		text-shadow: 0 0 0;
 	}
 }
+
 .nav404 li a {
-	color: white;
+	color: #aaa;
 
 	&:hover,
-	&:active,
-	&.active {
+	&:active {
 		color: white;
 		border-color: white;
 	}
@@ -437,6 +449,7 @@ $color: rgba(150,220,220,1);
 p a {
 	color: inherit;
 	border-bottom: 2px solid $darkGrey;
+	transition: border-color ease-in-out 0.3s;
 
 	&:hover {
 		border-color: $logoBlue;
