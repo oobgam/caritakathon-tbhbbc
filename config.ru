@@ -8,12 +8,12 @@
 
 require 'rubygems'
 require 'sinatra'
+require 'rack/recaptcha'
 
 use Rack::Recaptcha, :public_key => '6LddaegSAAAAALwgXrj5ZyisluccNbLcd-52nUNc', :private_key => '6LddaegSAAAAAJAY5BPEZlvhLV0oGAKJVaCtCBx7'
 helpers Rack::Recaptcha::Helpers
 enable :sessions
 
-require 'rack/recaptcha'
 require './contact.rb'
 
 module Rack
