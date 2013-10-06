@@ -67,6 +67,11 @@ article .subheader {
 		background-image: url(/img/feeding.jpg);
 		background-color: $red;
 	}
+
+	&.pray {
+		background-image: url(/img/pray2.jpg);
+		background-color: $blue2;
+	}
 }
 
 .v { font-family: $volkorn; }
@@ -490,8 +495,14 @@ p a {
 	background-size: 25rem;
 	background-repeat: no-repeat;
 	background-position: bottom right;
-	.subheader { border-color: $blue; }
 }
 
-#intro { padding-bottom: 10rem; background-image: url('/img/main2.jpg'); }
-#history { background-image: url('/img/pray.jpg'); }
+#intro { 
+	padding-bottom: 10rem;
+	background-image: url('/img/main2.jpg');
+	.subheader { border-color: $blue; }
+}
+#history {
+	background-image: url('/img/pray.jpg');
+	.subheader { border-color: $blue2; }
+}
