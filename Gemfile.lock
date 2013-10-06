@@ -30,6 +30,7 @@ GEM
       rack (>= 1.0.0)
       url_mount (~> 0.2.1)
     i18n (0.6.4)
+    json (1.8.0)
     listen (0.7.3)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -92,6 +93,8 @@ GEM
       rack
     rack-protection (1.5.0)
       rack
+    rack-recaptcha (0.6.6)
+      json
     rack-test (0.6.2)
       rack (>= 1.0)
     rb-fsevent (0.9.3)
@@ -128,4 +131,5 @@ DEPENDENCIES
   middleman-autoprefixer
   middleman-livereload
   pony
+  rack-recaptcha
   sinatra

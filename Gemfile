@@ -6,3 +6,4 @@ gem "middleman-livereload"
 
 gem "sinatra"
 gem "pony"
+gem "rack-recaptcha"
