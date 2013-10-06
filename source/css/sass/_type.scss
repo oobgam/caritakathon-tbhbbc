@@ -399,7 +399,7 @@ $color: rgba(150,220,220,1);
 		}
 	}
 
-	&.show { height: 7.5rem; }
+	&.show { height: 12.5rem; }
 }
 
 .contact,
@@ -443,9 +443,6 @@ $color: rgba(150,220,220,1);
 	}
 }
 
-#intro .subheader { border-color: $red; }
-#history .subheader { border-color: $yellow; }
-
 p a {
 	color: inherit;
 	border-bottom: 2px solid $darkGrey;
@@ -463,3 +460,38 @@ p a {
 #recaptcha_div {
 	margin: 2rem auto;
 }
+
+#feeding-program {
+	background-image: url('/img/feeding2.jpg');
+	.subheader { border-color: $red; }
+}
+#relocation-program {
+	background-image: url('/img/relocate2.jpg');
+	.subheader { border-color: $green; }
+}
+#livelihood-program {
+	background-image: url('/img/livelihood2.jpg');
+	.subheader { border-color: $yellow; }
+}
+
+#feeding-program,
+#relocation-program,
+#livelihood-program {
+	padding-top: 19rem;
+	margin-top: 2rem;
+	background-size: 25rem;
+	background-repeat: no-repeat;
+	background-position: top center;
+
+}
+
+#intro,
+#history {
+	background-size: 25rem;
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	.subheader { border-color: $blue; }
+}
+
+#intro { padding-bottom: 10rem; background-image: url('/img/main2.jpg'); }
+#history { background-image: url('/img/pray.jpg'); }
